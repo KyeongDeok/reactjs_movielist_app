@@ -30,7 +30,7 @@ _getMovies = async () => {
 }
 
 _callApi = () => {
-	return fetch("https://yts.am/api/v2/list_movies.json?sort_by=download_data")
+	return fetch("https://yts.am/api/v2/list_movies.json?sort_by=rating")
 	.then((response) => response.json())
 	.then((json) => json.data.movies)
 	.catch((err) => console.log(err))
